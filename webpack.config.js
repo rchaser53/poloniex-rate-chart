@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'inline-source-map',
   context: path.resolve(__dirname, './src'),
   entry: {
-    hoge: "./entry.js"
+    hoge: "./ts/chart.ts"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -13,13 +13,16 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
-    extensions: ['.html', '.js']
+    extensions: ['.ts', '.js']
   },
   module: {
     rules:[{
-      test: /\.html$/,
+      test: /\.ts$/,
       loaders:[
-        'html-loader'
+        'ts-loader'
+      ],
+      exclude: [
+        "node_modules"
       ]
     },
   ]}

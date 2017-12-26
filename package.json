@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc -p ."
+    "tsc": "tsc -p .",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "app-root-dir": "^1.0.2",
     "axios": "^0.17.1",
+    "chart.js": "^2.7.1",
     "date-fns": "^1.29.0",
     "dumb-url-handler": "^1.0.3",
     "open": "^0.0.5"
@@ -27,7 +29,12 @@
   "devDependencies": {
     "@types/node": "^8.5.2",
     "koa": "^2.4.1",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2",
     "prettier": "^1.9.2",
-    "typescript": "^2.6.2"
+    "ts-loader": "^3.2.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0"
   }
 }
