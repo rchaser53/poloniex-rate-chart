@@ -1,0 +1,33 @@
+{
+  "name": "poloniex-rate-chart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc -p ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rchaser53/poloniex-rate-chart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rchaser53/poloniex-rate-chart/issues"
+  },
+  "homepage": "https://github.com/rchaser53/poloniex-rate-chart#readme",
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "axios": "^0.17.1",
+    "date-fns": "^1.29.0",
+    "dumb-url-handler": "^1.0.3",
+    "open": "^0.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^8.5.2",
+    "koa": "^2.4.1",
+    "prettier": "^1.9.2",
+    "typescript": "^2.6.2"
+  }
+}
