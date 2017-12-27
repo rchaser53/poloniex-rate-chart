@@ -5,6 +5,7 @@
 		"noLib": false,
 		"target": "es2015",
 		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
 		"module": "commonjs",
 		"experimentalDecorators": true,
 		"strictNullChecks": true,
@@ -12,8 +13,6 @@
 		"noEmit": false,
 		"noImplicitReturns": true,
     "noImplicitThis": true,
-		"rootDir": "./src/ts",
-		"outDir": "./src/js",
 		"forceConsistentCasingInFileNames": true,
 		"lib":[
 			"es2015",
@@ -25,8 +24,5 @@
 	"compileOnSave":false,
 	"exclude":[
     "node_modules"
-	],
-	"include": [
-		"src/**/*.ts"
 	]
 }
