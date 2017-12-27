@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "nuxt": "nuxt",
     "watch": "node watch.js",
     "tsc": "tsc -p .",
     "webpack": "webpack"
@@ -25,7 +26,12 @@
     "chart.js": "^2.7.1",
     "date-fns": "^1.29.0",
     "dumb-url-handler": "^1.0.3",
-    "open": "^0.0.5"
+    "element-theme-chalk": "^2.0.9",
+    "element-ui": "^2.0.9",
+    "nuxt": "^1.0.0-rc11",
+    "open": "^0.0.5",
+    "vue": "2.4.4",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
