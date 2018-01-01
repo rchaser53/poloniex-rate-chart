@@ -1,35 +1,31 @@
 import * as path from 'path'
 import * as open from 'open'
 
-import Koa from 'koa'
-import Router from 'koa-router'
-import serve from 'koa-static'
-import mount from 'koa-mount'
+import * as express from 'express'
+const app = express()
+
+const server = require('http').createServer(app)
+
 import { subHours } from 'date-fns'
 
 import { getJpyToBtcRateInAmericaHistory } from './poloniex'
 
-const app = new Koa();
-const router = new Router();
+app.use('/public', express.static(path.join(__dirname, 'dist')));
 
-app
-  .use(router.routes())
-  .use(router.allowedMethods())
-
-app.use(mount('/public', serve('./dist')))
-
-router.get('/btc-jpy', async (req, res) => {
+app.get('/btc-jpy', async (req, res) => {
   const americanTime = subHours(Date.now(), 12).getTime() / 1000
   const rateHistoryInAmerica = await getJpyToBtcRateInAmericaHistory(americanTime)
 
   res.json(rateHistoryInAmerica)
 })
 
-router.get('/rategraph', (req, res) => {
+app.get('/rategraph', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'))
 })
 
-app.listen(3100, () => {
+app.get('/nyan', (req, res) => 'nyan')
+
+server.listen(3100, () => {
   open('http://localhost:3100/rategraph')
   console.log('run server')
 })

@@ -7,6 +7,7 @@
     "nuxt": "nuxt",
     "watch": "node watch.js",
     "tsc": "tsc -p .",
+    "tsc-src": "tsc -p ./tsconfig-src.json",
     "webpack": "webpack"
   },
   "repository": {
@@ -39,10 +40,7 @@
   "devDependencies": {
     "@types/node": "^8.5.2",
     "chokidar": "^1.7.0",
-    "koa": "^2.4.1",
-    "koa-mount": "^3.0.0",
-    "koa-router": "^7.3.0",
-    "koa-static": "^4.0.2",
+    "express": "^4.16.2",
     "prettier": "^1.9.2",
     "shelljs": "^0.7.8",
     "ts-loader": "^3.2.0",
