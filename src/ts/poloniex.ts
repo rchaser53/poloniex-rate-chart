@@ -31,11 +31,12 @@ export const getJpyToBtcRateInAmericaHistory = async (start: number, end?: numbe
   try {
     const host = 'https://poloniex.com/public'
     const url = addQuery(host, {
-      currencyPair: 'USDT_BTC',
+      currencyPair: 'BTC_XRP',
       command: 'returnTradeHistory',
       start, end
     })
 
+    console.log(url, 28)
     return (await axios.get(url)).data
   } catch (error) {
     throw new Error(error)
