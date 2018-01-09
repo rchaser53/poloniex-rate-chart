@@ -1,0 +1,15 @@
+version: "3"
+services:
+  web:
+    container_name: postgres
+    image: postgres
+    tty: true
+    volumes:
+      - /Users/rchaser53/Desktop/poloniex-rate-chart/pg/:/var/lib/postgresql/data
+    ports:
+     - "5432:5432"
+    environment:
+      - "POSTGRES_PASSWORD=nyan"
+networks:
+  back-tier:
+    driver: bridge

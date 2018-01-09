@@ -3,3 +3,5 @@ src/js/*
 .DS_Store
 bundle.js
 .nuxt
+pg/*
+!.gitkeep
