@@ -36,7 +36,6 @@ export const getJpyToBtcRateInAmericaHistory = async (start: number, end?: numbe
       start, end
     })
 
-    console.log(url, 28)
     return (await axios.get(url)).data
   } catch (error) {
     throw new Error(error)

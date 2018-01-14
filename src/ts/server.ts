@@ -23,8 +23,6 @@ app.get('/rategraph', (req, res) => {
   res.sendFile(path.join(__dirname, '../index.html'))
 })
 
-app.get('/nyan', (req, res) => 'nyan')
-
 server.listen(3100, () => {
   open('http://localhost:3100/rategraph')
   console.log('run server')
