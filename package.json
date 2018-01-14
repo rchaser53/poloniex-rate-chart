@@ -8,7 +8,8 @@
     "watch": "node watch.js",
     "tsc": "tsc -p .",
     "tsc-src": "tsc -p ./tsconfig-src.json",
-    "test": "jest",
+    "test": "npm run cov && cat ./coverage/lcov.info | coveralls",
+    "cov": "jest --runInBand --coverage",
     "webpack": "webpack"
   },
   "repository": {
@@ -27,6 +28,7 @@
     "app-root-dir": "^1.0.2",
     "axios": "^0.17.1",
     "chart.js": "^2.7.1",
+    "coveralls": "^3.0.0",
     "date-fns": "^1.29.0",
     "dumb-url-handler": "^1.0.3",
     "element-theme-chalk": "^2.0.9",

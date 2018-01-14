@@ -5,3 +5,4 @@ bundle.js
 .nuxt
 pg/*
 !.gitkeep
+coverage
