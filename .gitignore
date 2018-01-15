@@ -6,3 +6,4 @@ bundle.js
 pg/*
 !.gitkeep
 coverage
+vendor
